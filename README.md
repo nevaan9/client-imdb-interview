@@ -48,5 +48,8 @@ The first time you run the project you'll see a root page containing a list of u
 
 After these steps are complete the application should run and you should see a list of users. 
 
+#### Incredibly Helpful Plugin
+* https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd
+
 ### TODO
 * come up with list of interview questions
