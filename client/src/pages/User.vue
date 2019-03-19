@@ -3,8 +3,8 @@
     <div>
       <h2>Ratings for user {{ user.id }}</h2>
       <div>
-        <h5>Gender: {{ user.gender }}</h5>
-        <h5>Occupation: {{ user.occupation }}</h5>
+        <h5>Gender: {{ user.gender | gender }}</h5>
+        <h5>Occupation: {{ user.occupation | occupation }}</h5>
       </div>
       <q-btn
         color="secondary"
@@ -38,6 +38,41 @@ export default {
   data () {
     return {
       user: null
+    }
+  },
+  filters: {
+    occupation: function (value) {
+      switch (value) {
+        case '0': return 'other'
+        case '1': return 'academic/educator'
+        case '2': return 'artist'
+        case '3': return 'clerical/admin'
+        case '4': return 'college/grad student'
+        case '5': return 'customer service'
+        case '6': return 'doctor/health care'
+        case '7': return 'executive/managerial'
+        case '8': return 'farmer'
+        case '9': return 'homemaker'
+        case '10': return 'K-12 Student'
+        case '11': return 'lawyer'
+        case '12': return 'programmer'
+        case '13': return 'retired'
+        case '14': return 'sales/marketing'
+        case '15': return 'scientist'
+        case '16': return 'self-employed'
+        case '17': return 'technician/engineer'
+        case '18': return 'tradesman/craftsman'
+        case '19': return 'unemployed'
+        case '20': return 'writer'
+        default: return 'not specified'
+      }
+    },
+    gender: function (value) {
+      switch (value) {
+        case 'M': return 'Male'
+        case 'F': return 'Female'
+        default: return 'not specified'
+      }
     }
   },
   created () {
