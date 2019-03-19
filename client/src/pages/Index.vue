@@ -39,6 +39,9 @@ export default {
         limit: 50
       })
     }
+    this.$router.push({
+      query: { page: 1 }
+    })
   },
   filters: {
     occupation: function (value) {
