@@ -33,6 +33,6 @@
   "author": "jpgilchrist",
   "license": "",
   "engines": {
-    "node": "^9.11"
+    "node": "^11.10.1"
   }
 }

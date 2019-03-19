@@ -3,8 +3,12 @@ const routes = [
   {
     path: '/',
     component: () => import('layouts/WhiteboardLayout.vue'),
+    name: 'main',
+    redirect: { name: 'users' },
     children: [
-      { path: '', component: () => import('pages/Index.vue') }
+      { path: '/users', name: 'users', component: () => import('pages/Index.vue') },
+      { path: '/users/:id', name: 'user/id', props: true, component: () => import('pages/User.vue') },
+      { path: '/movies', name: 'movies', component: () => import('pages/Movies.vue') }
     ]
   }
 ]

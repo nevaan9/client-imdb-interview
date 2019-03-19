@@ -38,7 +38,10 @@ module.exports = function (ctx) {
         'QItem',
         'QItemSection',
         'QItemLabel',
-        'QInnerLoading'
+        'QInnerLoading',
+        'QTabs',
+        'QTab',
+        'QRouteTab'
       ],
 
       directives: [
